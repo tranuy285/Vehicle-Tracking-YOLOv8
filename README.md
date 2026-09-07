@@ -17,7 +17,7 @@ Quy trình xây dựng và tích hợp hệ thống được chia thành 3 giai 
 -  **Tính toán vận tốc:** Áp dụng kỹ thuật biến đổi phối cảnh (Perspective Transformation) nhằm ánh xạ tọa độ điểm ảnh sang tọa độ thế giới thực giả lập (Bird's Eye View) để triệt tiêu độ méo phối cảnh. Hệ thống sau đó dựa vào sự thay đổi vị trí của đối tượng (quãng đường) qua một số khung hình (thời gian) để tính toán vận tốc tức thời theo đơn vị km/h.
 
 ## 4. Kết quả
-Dự án đã đạt được các kết quả nổi bật về cả mặt định lượng và khả năng ứng dụng thực tế:
+Dự án đã đạt được các kết quả như sau:
 - **Hiệu suất phát hiện:** Trên tập kiểm định, mô hình YOLOv8n đạt Precision 0.934, Recall 0.795, mAP@50 đạt 0.884 và mAP50–95 đạt 0.718. Mô hình nhận diện cực kỳ chính xác nhóm đối tượng car và motorbike.  
 - **Tốc độ xử lý:** Hệ thống YOLOv8 + ByteTrack có thể xử lý video với tốc độ trung bình từ 14 - 25 FPS. Qua thử nghiệm, YOLOv8 (22.4 FPS) cho tốc độ xử lý nhanh hơn khoảng 1.5 lần so với bản YOLOv12 (13 FPS) trên cùng bối cảnh, rất phù hợp cho ứng dụng thời gian thực.  
 - **Xử lý che khuất (Occlusion):** Hệ thống có khả năng kiên nhẫn lưu trữ trạng thái bằng Kalman Filter và gán lại đúng ID cũ (ví dụ: khôi phục thành công ID sau 13 frames bị vật cản che lấp). Tuy nhiên, vẫn xuất hiện hiện tượng chuyển đổi sai ID nếu phương tiện bị che khuất quá lâu (trên 16 frames) hoặc bất ngờ thay đổi vận tốc trong vùng tối.  
