@@ -1,4 +1,3 @@
 # Vehicle-Tracking-YOLOv8
-A Computer Science project for Computer Vision course
-
-Vehicle tracking using finetuned YOLOv8 model with ByteTrack
+## 1. Giới thiệu
+Dự án xây dựng hệ thống 
